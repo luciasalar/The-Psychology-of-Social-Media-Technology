@@ -178,18 +178,16 @@ Based on the complexity of diagnostic criteria and the high ratio of comorbidity
 
 \section{Social media study on mental health}
 
-\subsection{Types of social media platforms}
 
-
-
-\subsection{Types of social media study} 
 We introduce the 4P risks factors (predisposing, precipitating, perpectuating, protective) and the presenting factors in the previous sections. Now we group the social media studies on mental health based on these five components. 
 
 \subsubsection{predisposing factors} (import citation list)
 
 Social media studies that cover the predisposing factors include: gender and culture differences, psychological traits and self-disclosure. cite(). The psychological traits study mainly include personality and self-esteem.
 
- \textbf{gender and culture differences.} De Choudhury et al., study the social media disclosure on mental illness and find significant differences between content shared by male and female users and users from different countries. Male users shows more negativity and more relunctant to seek social support. Mental health disclosure users from various cultures display different language patterns in psychological processing cite(). Park et al, found that female Facebook users are warmer, more compassionate and slightly more assertive in their language. cite() Pennebaker et al, found that depressed individuals who wrote in Spanish showed more relational concern, whereas, individuals who wrote in English showed more concern in medication. cite()
+ \textbf{gender and culture differences.} Study shows that the dislosure of traumatic events various across cultures (Talking about traumatic events: A cross-cultural investigation). De Choudhury et al., study the social media disclosure on mental illness and find significant differences between content shared by male and female users and users from different countries. Male users shows more negativity and more relunctant to seek social support. Mental health disclosure users from various cultures display different language patterns in psychological processing cite(). Park et al, found that female Facebook users are warmer, more compassionate and slightly more assertive in their language. cite() Pennebaker et al, found that depressed individuals who wrote in Spanish showed more relational concern, whereas, individuals who wrote in English showed more concern in medication. cite()
+
+
 
  \textbf{Personality.} Numourous studies have found relationship between user personality and social media usage (list of citation). Hughes et al., found personality influence whether a person have a preference to use Facebook or Twitter. People with high conscientiousness tend to use Twitter, while sociable people tend to use Facebook cite().  (Personality and motivations associated with Facebook use) (Personality traits and self-presentation at Facebook) Extraverts are more active in Facebook activities while neuroticism is negatively correlated with the likelihood to writing comments. Chiu and colleagues found that self-inferiority predict Facebook use and people with a depressive character are prone to have Facebook addiction. xx (Shyness and Locus of Control as Predictors of Internet Addiction and Internet Use) also found that shyness predict Facebook addiction. Individuals high in openness are more likely to post and share intellectual topics ((The Big Five, self-esteem, and narcissism as predictors of the topics people write about in Facebook status updates)). People who are high in arcissism use Facebook for attention seeking. They are more likely to update their diet and exercise routine (The Big Five, self-esteem, and narcissism as predictors of the topics people write about in Facebook status updates, the relationship between addictive use of social media, narcissism, and self-esteem: Findings from a large national survey)
 
@@ -213,14 +211,81 @@ xx et al,. (Facebook self-disclosure: Examining the role of traits, social cohes
 There are also studies that focus on how important or stressfull life events are disclosed on Facebook. It is found that people tend to share postive life events indirectly and negative life events directly.
 (How Are Important Life Events Disclosed on Facebook? Relationships with Likelihood of Sharing and Privacy) In addition, age and loneliness also predict Facebook disclosure (Who discloses the most on Facebook?, (Uses and Gratifications of digital photo sharing on Facebook)).
 
+xx et al study the exposure level of information from different domains on Facebook and real life, and whether the information share on FB is consistent with real life. They found that the level of exposure on information about relationship issues, address, phone numbers, email address and health history are much lower than physical world. Whereas, photos about the user and the user's family much higher exposure on Facebook than in physical world. The exposure level of positive and negative emotion, places they visit, political views, relationship status, work and study places are similar on Facebook and physical world. (Contrasting People’s Attitudes Towards Self-disclosure in Online Social Networks and Face-to-Face Settings) 
 
 
 \subsubsection{precipitating factors}
 
 
+\textbf{Stress prediction models}. Stress is the major precipitating factor for mental illness. There is large amount of stuides that builds machine learning classifier to predict stress level based on social media data. The process of building stress prediction classifer mainly involve human labels on posts that shows stress then using positive and negative valence words as features in the machine learning models. cite((STRESS DETECTION AND SENTIMENTPREDICTION: A SURVEY, TensiStrength: Stress and relaxation magnitude detection for social media texts, Twitter User Behavior Understanding with Mood Transition Prediction, User-level Psychological Stress Detection from Social Media Using Deep Neural Network, User-level Psychological Stress Detection from Social Media Using Deep Neural Network). Some of the studies tie the stress prediction classifer to an App that provides theraputic advices to the user in an attempt to improve their coping skills. (Helping Teenagers Relieve Psychological Pressures:A Micro-blog Based System). However, the theraputic effect of these apps are not fully studied yet.
+
+\textbf{Life events}. 
+
+Sentiment is a direct indicator of life stress, which indicate the perceived level of stress. Whereas stressful life events reflect stress from an objective perspective. Researchers are insterested in how different stressful life events are disclosed on social media. xx et al., suggest that people engage in breakup disclosure in two ways: one-to-many announcement on the wall of the social media platform or change private status, which reflects self-presentation (Relationship breakup disclosures and media ideologies on Facebook). Posts the share traumatic life events have a greater amount of negative emotions. There is cultural diversity in sharing traumatic events (Talking about traumatic events: A cross-cultural investigation)
+ 
+ In order to study the impact of life events on people, first, reseachers need to identify life events from the text. Life events are difficult to identify from the text because users often report them indirectly, thus some of the life events need to be be inferred from the text. XX found that positive events are usually shared indirectly but negative events are reported directly (How Are Important Life Events Disclosed on Facebook? Relationships with Likelihood of Sharing and Privacy) Nevertheless, many users do not report their life events on social platform. 
+
+Despite the fact that life events are difficult to identify, there are a few studies build predition models on life events. (Detecting life events from twitter based on temporal semantic features, Predicting the Occurrence of Life Events from User's Tweet History, Predicting future personal life events on twitter via recurrent neural networks).xx et al, (Detecting life events from twitter based on temporal semantic features) compare the sentence smilarity of daily life tweets with tweets that report life events and use their distances as features in the classifier. They also find that if a sequence of tweets occur before or after a tweet, the tweet is likely to be an important life event.
+
+
+
+
+We present coding system for identifying emotion distressed content, followed by a detailed analysis of language use that lays a foundation for natural language processing (NLP) tasks, such as automatic detection of bereavement-related distress.
+
+(Grief-Stricken in a Crowd: The Language of Bereavement and Distress in Social Media)
+Greater use of first person singular pronouns, past tense verbs, adverbs, prepositions, conjunctions, and negations, as well as higher word count per comment were observed in ED comments; non-ED comments demonstrated higher levels of use of second person pronouns. Significant differences in sentiment content were also observed between ED and non-ED comments: non-ED comments showing higher use of social process words and words expressing positive emotion and sadness, and ED comments with higher use of anger words.
+
+(Benefits and Drawbacks of Using Social Media to Grieve Following the Loss of Pet)
+We find that users weigh several benefits and drawbacks before making these sensitive disclosures on Facebook, including whether they think posting will mitigate or perpetuate their emotional pain, the privacy of the experience vs. the public nature of sharing, and whether their disclosures will be met with support or dismissal (i.e., disenfranchised grief). We conclude by discussing implications for theory around grief and social support, as well as the design of social media interfaces that support grieving processes for the loss of a loved one.
+
+We find that increased social isolation and lowered availability of social capital on Facebook, are the best predictors of PPD in mothers. (Characterizing and Predicting Postpartum Depression from Shared Facebook Data)
+
+(Identifying Prominent Life Events on Twitter)
+semantic feature, interactive feature:Interaction features: interaction features are a novel
+set of features that look at the network of users who
+interact with a particular tweet. Rather than just consider
+number of retweets, favourites or replies, we consider
+who are the users performing these actions and
+their interaction patterns towards the author of the
+post. The hypothesis for using these features is that,
+if users that do not generally interact with the author
+of the post they suddenly show interest, the post may
+contain information of special interest.
+
+
+(Major Life Changes and Behavioral Markers in Social
+Media: Case of Childbirth)
+for a certain number of mothers (14-
+15\%), activity goes down, PA goes down, NA goes up,
+activation and dominance go down together, and the use of
+1st person pronouns goes up, while that of 3rd person
+pronouns goes down. We also notice that certain mothers
+consistently show these dynamics over the entire postnatal
+period of our analysis. In essence, we find that there are
+new mothers who are exhibiting signs of decreased social
+interactions, as manifested through social media, along with
+a number of changes in emotional expression in a generally
+negative direction.
+
+
 \subsubsection{perpectuating factors}
 
 long term stress and other factors that hasn't been explored on social media, social ties, crowdnessnes, social status
+
+
+
+The stress prediction model extract positive and ....
+
+
+predicitng stressful life events
+
+
+disclosure of important life events
+
+
+what is missing? linking predisposing factors to mental health. What matters is stress interacting with predisposing factors and protective factors 
+(personality, self-esteem (studies only find correlation of certain social media behaviors), culture, gender, protective: ***social ties, social support, social roles)
+
 
 \subsubsection{protective factors}
 
@@ -229,7 +294,11 @@ social network
 
 lonely  -> disclose more on FB -> bigger social network (less high quality social ties)
 
+
 students with higher openness levels reported spending more time on Facebook and having more friends on Facebook. Interestingly, students with higher levels of loneliness reported having more Facebook friends. (Williams et al)
+
+
+
 
 
  Results indicate that the more time spent on and the more social network memberships, the higher stress and lower quality of life; Facebook-specific usage was unrelated to either well-being variable. Together, these findings suggest that the current increase in social media variety and usage may be detrimental to user well-being. Users who shared important, bad health news on Facebook had higher stress and lower quality of life than those who did not, with no significant differences for sharing good health news. The more that users did not share important news on Facebook for self-protection and friend unresponsiveness reasons, the greater their stress. The self-protection reason was also negatively related to quality of life. These inconsistent findings can likely be partially explained by the nature of the information that is shared. These findings are discussed in light of disclosure and relationship patterns on social networks. (Disclosures about important life events on Facebook: Relationships with stress and quality of life)
