@@ -2,155 +2,559 @@
 %*******************************************************************************
 %****************************** Third Chapter **********************************
 %*******************************************************************************
-\chapter{Transdiagnostics Symptoms}
+\chapter{Online Social Support for People Who Have Experienced Infidelity: The Case of Reddit}
+\section{Abstract}
+Despite its many shortcomings, social media is an important source of social support. In this study, we investigate how people who have experienced infidelity seek and receive social support on the platform Reddit. We examined which post characteristics lead to higher community engagement, and which comments the original posters (OPs) considered to be helpful. Our corpus consists of 1646 Reddit posts and 30745 associated comments (19.0\% OP replies), which were clustered to detect underlying patterns. Partner gender affects engagement: posts about female partners generate more comments and more net upvotes than posts about male partners. Posts with more comments usually feature several replies by the OP, and highly rated comments yielded long and active subthreads. OPs tend to value comments that express positive emotions, use social cues, and suggest that the poster is being heard.
+We discuss implications for designing online communities that support the resilience of people who have experienced stressful life events.
 
-% **************************** Define Graphics Path **************************
-\ifpdf
-    \graphicspath{{Chapter3/Figs/Raster/}{Chapter3/Figs/PDF/}{Chapter3/Figs/}}
-\else
-    \graphicspath{{Chapter3/Figs/Vector/}{Chapter3/Figs/}}
-\fi
+\section{Introduction}
 
-\section{First section of the third chapter}
-And now I begin my third chapter here \dots
+For a long time, the Internet has been facilitating what Burrows et al.\cite{burrows2000} call ``Virtual Community Care''. Social media can be a great source of support if people feel able to disclose their problems~\cite{de2014mental,andalibi_sensitive_2017}. In addition, the narratives that emerge when people write posts about their issues can reorganise traumatic or stressful memories~\citep{bevan_how_2015,lepore2002mending,smyth2001effects}. In order to better leverage the support potential of online communities, we need to understand how online communities engage with people who seek support and what kinds of reactions are perceived as helpful and supportive. 
 
-And now to cite some more people~\citet{Rea85,Ancey1996}
+In this paper, we focus on support for a particular type of stressful life event, namely, the discovery that a person's romantic partner has done something which the person perceives as an act of infidelity.
+% (By \emph{romantic partner}, we mean an adult who is in a committed romantic relationship with another consenting adult.) \walid{do we need this? it is obvious}
+What constitutes infidelity varies from couple to couple, and from person to person.  Some people consider an act as seemingly innocuous as friending an ex-romantic partner on Facebook to be infidelity, while people in open relationships allow sexual intercourse with others as long as it conforms to previously negotiated rules~\cite{cravens2014clinical,blow2005infidelity,helsper2010netiquette}. While there is a substantial literature on internet infidelity (e.g.~\cite{Jain2018,sahni_myths_2018}) and relationship breakup on social media (e.g.~\cite{garimella2014love,herron_digital_2016,lukacs_romantic_2015,fox_romantic_2015}), we are not aware of any studies of online social support for people who have experienced infidelity that use data-driven quantitative analysis. 
 
-\subsection{First subsection in the first section}
-\dots and some more 
+%However, there are a few complex factors that influence whether people will disclose their problems or negative life events on social media \cite{andalibi_announcing_2018, andalibi_social_2016, de_choudhury_major_2013, bevan_how_2015}. Among which, anonymity and feeling part of a community are critical for self-disclosure ~\cite{ma_anonymity_2016}. In light of these finding, social media platforms that feature in anonymity provide a friendly environment for individuals to narrate their stressful life experience. Understanding how individuals express their experience and their interaction with the online community help us to utilize social media platforms to assist the recovery process in future research. 
 
-\subsection{Second subsection in the first section}
-\dots and some more \dots
+%\maria{Recent work on relationship difficulties, and break ups in HCI. Infidelity as cause of relationship difficulties. Infidelity of partner as a stressful event. Gender difference in infidelity.}
+%Expressive writing of important life events has a wide range of emotional, social and physical health benefits for individuals coping with stressful events \cite{}. Clinical studies suggest that traumatic memories are more disorganized than other memories. As a consequence, the treatment of traumatic memories often aim at organizing memories. Studies have found that narrative formation is an important strategy for this purpose  \lucia{add more citation}. 
 
-\subsubsection{First subsub section in the second subsection}
-\dots and some more in the first subsub section otherwise it all looks the same
-doesn't it? well we can add some text to it \dots
+%Social media platforms emerge as a place for individuals to share or broadcast their thoughts and emotion. Hence, they provide rich information to study mental health related issues. Social media platforms such as Twitter and Facebook captures longitudinal data that reflect the predisposing, precipitating and perpetuating factors that contribute to the onset and development of mental illnesses.  There are classification models on mental illnesses \cite{preoctiuc2015mental, de2016discovering, de2013predicting}, psychological traits \cite{ross2009personality, kosinski2013private} well-being \cite{chen2017building} and social support \cite{de2014mental, moorhead2013new,leung2005multiple}. On the other hand, social media platforms such as reddit, enables users to increase their self-disclosure level due to user anonymity.  Audiences on the platform are also keen on providing social support to those who have experienced stressful life events, such as postpartum \cite{de2014characterizing}, bereavement \cite{brubaker2012grief}, breakup \cite{garimella2014love}, child birth \cite{de_choudhury_major_2013}. 
 
-\subsection{Third subsection in the first section}
-\dots and some more \dots
+%\maria{Work on social support for people who are going through a bad time, work on how stressful, negative events are talked about on social media.} 
+%Stressful life events such as divorce, death, being fired from work, break up and so on are often linked to mental health deterioration because it requires significant adjustment in life routine. In particular, relationship difficulties have been found to be a precipitator of depression \cite{brown1995loss, christian2001impact}. 
+%However, social support or the recovering process of relationship difficulties on social media haven't been explored yet. Thus, it is important to examine how individuals utilize social media platform to accelerate their recovering process on stressful life events.
 
-\subsubsection{First subsub section in the third subsection}
-\dots and some more in the first subsub section otherwise it all looks the same
-doesn't it? well we can add some text to it and some more and some more and
-some more and some more and some more and some more and some more \dots
+%Discovering a partner seeking alternatives secretly is a stressor that often precipitates anxiety and depression due to the uncontrollability, high emotional arousal, feeling of loss and frustration of goals associated with the event. Individuals often narrate their experience anonymously on social media to gain social support. 
 
-\subsubsection{Second subsub section in the third subsection}
-\dots and some more in the first subsub section otherwise it all looks the same
-doesn't it? well we can add some text to it \dots
+In our study, we address this gap in the literature through an in-depth quantitative study of the ways in which people who have experienced infidelity find support on the social media platform Reddit, and discuss implications for designing and moderating communities where people discuss stressful life events. 
 
-\section{Second section of the third chapter}
-and here I write more \dots
+Reddit is a social media website where registered users (redditors) can submit posts under a variety of topics called \emph{subreddit}. While Reddit is infamous for its high levels of trolling, the platform is actually an amalgam of many subcultures~\cite{massanari_participatory_2015,robards_belonging_2018}, and its potential as a source of information and support is well documented~\cite{carpenter_advice_2018,de2014mental,moore_redditors_2017,Sharma2018support}.
 
-\section{The layout of formal tables}
-This section has been modified from ``Publication quality tables in \LaTeX*''
- by Simon Fear.
+Larger subreddits often have quite distinct cultures, which can be the complete opposite of other subreddits on the site~\cite{massanari_participatory_2015}.  Subreddits where people talk about negative life events, such as r/survivinginfidelity, or seek advice on sensitive issues, such as r/relationship\_advice, typically have clear rules which are designed to ensure that the subreddit is a safe space. 
 
-The layout of a table has been established over centuries of experience and 
-should only be altered in extraordinary circumstances. 
+Being part of an anonymous community makes it much easier for social media users to disclose personal problems~\cite{ma_anonymity_2016}. Most of the people who post on Reddit (also called \emph{redditors}) use pseudonyms, not real names, and there is also a well established practice of creating throwaway accounts, to be deleted later, for discussing sensitive issues~\cite{leavitt_throwaway_2015}.
 
-When formatting a table, remember two simple guidelines at all times:
+While other researchers have focused on determining the type of support sought, we are interested in assessing the responsiveness of the community, and in determining whether the original posters perceive that support has been given. Therefore, our research questions are: 
+\begin{description}
+  \item[Level of Engagement:] What properties of the original post affect the amount of comments received? What types of posts and comments tend to be discussed in depth? 
+  \item[Perceived Support:] To what extent do original posters react to the comments, and are there any indications that they perceive that social support has been given?
+\end{description}
 
-\begin{enumerate}
-  \item Never, ever use vertical rules (lines).
-  \item Never use double rules.
-\end{enumerate}
+We apply our analysis on a set of 1646 Reddit posts that describe an experience of infidelity along with a total of 30745 associated comments. Our analysis shows that original posters (OPs) often ask for concrete suggestions and advice, and react positively to comments that are detailed, express positive emotions, and do not use swear words or net speak. Posts about female partners receive more engagement than posts about male partners, and in posts with high community engagement, 
+the OP often actively participates in the discussion. Comments that further promote engagement tend to be longer and directly address the OP's issues. 
+Commenters who talk about their own experiences of infidelity will also stimulate discussion, but the OP is unlikely to engage. 
 
-These guidelines may seem extreme but I have
-never found a good argument in favour of breaking them. For
-example, if you feel that the information in the left half of
-a table is so different from that on the right that it needs
-to be separated by a vertical line, then you should use two
-tables instead. Not everyone follows the second guideline:
+These results are highly relevant for those who design and maintain online support communities for sensitive and stressful life events. In order to stimulate discussion, posters should be encouraged to discuss the OP's concerns using supportive, polite language, and to address the OP directly. While commenters sharing their own experiences does not directly help the OP, such additional self-disclosure may well be a key part of overall community building. 
 
-There are three further guidelines worth mentioning here as they
-are generally not known outside the circle of professional
-typesetters and subeditors:
+% \walid{Shall we move this paragraph before the research questions?}
 
-\begin{enumerate}\setcounter{enumi}{2}
-  \item Put the units in the column heading (not in the body of
-          the table).
-  \item Always precede a decimal point by a digit; thus 0.1
-      {\em not} just .1.
-  \item Do not use `ditto' signs or any other such convention to
-      repeat a previous value. In many circumstances a blank
-      will serve just as well. If it won't, then repeat the value.
-\end{enumerate}
 
-A frequently seen mistake is to use `\textbackslash begin\{center\}' \dots `\textbackslash end\{center\}' inside a figure or table environment. This center environment can cause additional vertical space. If you want to avoid that just use `\textbackslash centering'
+%How these RQs are addressed: Level of engagement: bottom up, mclust analysis of posts and comments based on Reddit only features. Characterize posts using LIWC and Reddit features. Support Requested, offered, and perceived: clusters of questions. relate clusters of questions to posts. Characterize comments using LIWC features. Support perceived - analysis of appreciative comments. 
+
+
+
+\section{Background}
+
+\subsection{Infidelity and Relationships}
+
+What constitutes infidelity is highly personal. We define infidelity from the point of view of those who have experienced it, because we are interested in the support people access to cope with such an experience.  For the purpose of this study, we assume that a person has experienced infidelity if their partner has done something with another person that the person would interpret as an act of infidelity. Infidelity can be sexual or emotional~\cite{Jain2018}. In the case of sexual infidelity, a partner engages in a sexual act with another person that is not covered by existing relationship rules, while in the case of emotional infidelity, a partner forms a bond with someone else that creates an emotional distance from their original partner.
+
+Infidelity can be highly traumatic \cite{snyder2008integrative}; and some people show post-traumatic stress disorder symptoms, such as flashbacks and intense emotional reactions \cite{gordon2008optimal}. Women are more likely to experience symptoms of depression \cite{miller2008coping, blow2005infidelity}, whereas men are  more likely to respond with violence~\cite{christian2001impact}. 
+
+We are aware that talking about infidelity opens a linguistic minefield. In our source data, almost all people who experienced infidelity   use the verb ``to cheat'' to describe what their partner did. However, since this expression can be highly emotionally charged, we follow the relevant psychological and sociological literature in using the term ``infidelity'' to describe the partner's acts. 
+
+There is a considerable body of work on the online and digital repercussions of relationship problems and relationship breakup. Close online relationships can lead to considerable jealousy~\cite{demirtas-madran_relationship_2018,cohen_private_2014}. As these relationships deepen, they can result in acts of infidelity\cite{cravens_facebook_2013,mcdaniel_you_2017,Jain2018}. While some people monitor their former romantic partners online after a relationship break up~\cite{fox_romantic_2015,lukacs_romantic_2015}, others seek to disentangle themselves to the point of purging social media contact lists and digital possessions~\cite{herron_digital_2016,garimella2014love}. 
+
+\subsection{The Role of Language}
+
+When people write about relationship breakups, they are more likely to use first person singular pronouns and words that signal negative affect or sensory experiences~\cite{boals_word_2005}. Using words that reflect cognitive processes indicates that the writer is actively trying to understand and find meaning in the stressful event~\cite{boals_coping_2011}. In their study on gender and culture differences in mental health disclosure on Twitter~\cite{DeChoudhury2017gender}, De Choudhury et al. found that female posters tend to express more sadness and anxiety and focus more on on the present, while male posters use more first person pronouns, and talk less about social ties, friends, and family. 
+
+Language also functions as a cue to gender~\cite{bamman_gender_2014,cesare_how_2017}. However, while most posters use a writing style that is typical of their gender, there are also those who present in a more neutral way~\cite{bamman_gender_2014}, which makes classification difficult, especially for platforms such as Twitter~\cite{nguyen_why_2014}. On Reddit, responses to posters who are perceived as female are slightly more likely to express a sentiment~\cite{voigt_rtgender:_2018}. 
+
+%\subsection{Reddit} 
+% According to the service Statista.com, the desktop and mobile versions of Reddit had 1.6 billion unique visitors in July 2018. Redditors can post new content, comment on a post and reply to comments. Posts and comments that do not conform to a subreddit's rules can be deleted by the moderators.  Each subreddit has different community rules and standards, and moderators who enforce these standard. 
+
+%Most Reddit users register under a pseudonym, which can be very difficult to link to a person's real life identity, if disclosure of potentially identifying information is skillfully managed. Those who feel the need for an additional layer of anonymity can use \emph{throwaway accounts}, i.e., accounts that are made for posting about a specific, usually highly sensitive issue~\cite{leavitt_throwaway_2015}. 
+
+%\walid{Interesting subsection, but is it required? I am not sure about CHI, but this is not common in ICWSM, WebSci, and I think CSCW as well. I just want to be sure that we won't look like filling the paper with unnecessary information}
+
+\subsection{Social Support on Social Media}
+
+Social support is the ``assistance and protection given to others''~\cite[p.95]{langford_social_1997}. It is facilitated by \emph{social embeddedness}, which refers to an individual's connections to significant others and may include one's role in the family or the community and one's social network \cite{eaton1978life}. Hanson Langford et al.~\cite{langford_social_1997} distinguish between four types of support, \emph{emotional}, which provides empathy, love, and trust, \emph{instrumental}, which provides tangible goods and services, \emph{informational}, which provides problem solving support in times of stress, and \emph{appraisal}, which provides affirmation. 
+
+Some types of social media posts are more likely to attract supportive comments than others. Andalibi et al.~\cite{andalibi_sensitive_2017} found that online communities tended to engage more with posts that contained personal narratives, references to illness, concerns about the poster's appearance, and explicit requests for support. For mental health subreddits, De Choudhury et al.~\cite{de2014mental} found that posts in mental health subreddits that were high in negative affect resulted in more comments. In their study of investigated 55 subreddits that functioned as online mental health communities, Sharma and De Choudhury found that posts which adhered to the linguistic norms of the community were more likely to receive support~\cite{Sharma2018support}. 
+
+In this paper, we focus on perceived and enacted social support \cite{barrera1981preliminary, gottlieb1983social, heller1983social}. \emph{Enacted social support} refers to the support that other people provide, while \emph{perceived social support} focuses on whether people regard an action as supportive (\emph{adequacy}) or perceive potential for receiving support (\emph{availability}) \cite{cohen1983positive,holahan1981social}.  When a person goes through a difficult time in their lives, readily available and adequate perceived social support can shift the way in which they view their situation~\cite{barrera1986distinctions} and facilitate recovery~\cite{albrecht1987communicating}.
+
+
+
+
+% there are workarounds though ... https://www.reddit.com/r/redditdev/comments/8vaum1/how_to_retrieve_old_posts_from_subreddits/
+
+%\subsection{Social Support and Social Media}
+%Recently, a growing body of literature study mental health related issues through the lens of social media platforms. There are classification models on mental illnesses \cite{preoctiuc2015mental, de2016discovering, de2013predicting}, psychological traits \cite{ross2009personality, kosinski2013private} well-being \cite{chen2017building} and social support \cite{de2014mental, moorhead2013new,leung2005multiple}. Social media platform such as Twitter and Facebook captures longitudinal data that reflect the predisposing, precipitating and perpetuating factors that contribute to the onset and development of mental illnesses. 
+
+%Disclosing negative emotions is the greatest barrier for people who seek counseling \cite{Pennebaker07}.Anonymity and an audience of social ties are found to increase self-disclosure . Thus, people are more willing to disclose negative valence in social media with such features. For example, stressful life event subreddits allow people to be more expressive of their experience and gain social support from people who have been through similar situations. Multiple studies support that social media users receive considerable evidence of social support. For example, a sense of community and little aggression for harmful or pro-disease behaviors. 
+
+% Many studies utilizing social media data combine text features with functionalities of the platform, such as likes, voting scores and comments, response time of the comment, etc. A variety of techniques are used to analysis language attributes and language styles of the posts, such as Linguistic Inquiry and Word Count (LIWC), Latent Dirichlet Allocation topic analysis and bag-of-words to classify mental illness \cite{de2013predicting,preoctiuc2015mental}. Choudury et al., use topic analysis to explore the type of social support provided \cite{de2014mental}. In this study, we also employ cluster techniques to explore the structure of the support seeking posts.
+
+\section{DATA}
+\subsection{Data Collection}
+
+%We extracted data from Reddit using the Python Wrapper PRAW~\cite{praw} between 1st, Jan, 2016 and 31st, Dec, 2017. An initial search of Reddit showed that most of the discussion of infidelity occurred in three subreddits, r/survivinginfidelity, r/relationshipadvice, and r/infidelity. We collected posts from the three target subreddits that were marked as new, hot, top, and controversial. In addition, we searched the title of new, hot, top, and controversial posts from the main Reddit home page for a list of twelve key phrases of the form "X cheated (on me)" and "I was/got cheated on". For each post, we extracted title, text of the post, timestamp, post ID, ID of original poster (OP, post author), score (upvotes - downvotes), and all comments. For each comment, we collected the ID of the commenter, the ID of the comment, and the score of the comment (upvotes - downvotes). 
+We extracted data from Reddit using the Python Wrapper PRAW~\footnote{\url{https://praw.readthedocs.io/}} between 1 Jan 2016 and 31 Dec 2017. For several subreddits, including r/survivinginfidelity and r/infidelity, we collected all new, hot, top, and controversial posts. In addition, we used the following key phrases to search the main Reddit homepage for possible relevant posts in other subreddits: ``I was/got cheated on'', ``boyfriend/girlfriend/bf/gf cheated'', and ``husband/partner/ex/wife cheated on me''. We included all relevant posts that met our criteria and that could be retrieved within the maximum retrieval window of the Reddit API.
+For each post, we collected the title, text of the post, timestamp, post ID, ID of original poster (OP), score (upvotes - downvotes), and all comments on the post. For each comment, we collected comment ID, text, timestamp, and score.  
+%% MARIA: ATTENTION: HERE IS THE FUDGE. 
+
+
+
+% We also label the partner gender mentioned in the post with a rule-based classifer. Finally, we extracted the all the questions asked in each post. OUT -> Features 
+
+% Most posts on Reddit are locked to new comments after a period of time, but these locked posts can be difficult to retrieve automatically, because the Reddit API only returns the last 650 posts. Since most of the activity on a Reddit post occurs within the first days of posting, we focused on posts within the API's retrieval window. \walid{This paragraph is not clear at all! I don't know what it means}
+
+% We utilize Reddit official API (https://www.reddit.com/dev/api/) to obtain the dataset used in this paper. Specifically, we use Python wrapper PRAW () to collect posts and the metadata of the posts (e.g.  score of the post, number of comments). All the post in this dataset can be viewed by the public. We obtain posts in four categories (new,hot,top, controversial) under these subreddits: survivinginfidelity, relationship advice and infidelity. We also collect posts by querying key words in the title, the keywords we use include: 
+
+% bf cheated, boyfriend cheated, ex cheated on me, gf cheated, girlfriend cheated on me, husband cheated on me, I got cheated on, I was cheated on, partner cheated on me, she cheated on me, wife cheated on me. Corresponding to each post we collect title, text, timestamp, id, author, score, all the comments of a post, comment id, comment author and comment score. 
+
+%The initial search yielded 4007 posts. The initial search contains advertisement, jokes or other content but not relevant to intimate relationship infidelity experience. We manually removed the posts that are not relevant to infidelity. Since we are mainly interested in how Redditors engage with people who post about their experience of infidelity, and how social support is enacted and perceived, we only studied on posts that have at least one comment. After filtering out posts with no comments, 2875 posts (72\%) remained. These posts were sorted into three categories. Category 1, ``experience of infidelity'', covers posts where the OP talks about their partner's acts of infidelity ($n=1646$). Category 2, ``act of infidelity'', covers posts where the OP talks about ``cheating on'' their partner ($n=21$). Finally, Category 3, ``other'', stands for posts that are out of scope ($n=1209$). Our final dataset consists of all posts in Category 1. 
+
+The initial search yielded 4007 posts. We first eliminated all 1132 (28.25\%) posts with no comments, since we are interested in how community members give and receive social support. We then manually labeled each of the remaining 2875 (71.75\%) posts as \textit{describing an experience of infidelity}, where the OP talks about their partner's acts of infidelity ($n=1646$); \textit{act of infidelity}, where the OP talks about their own act of infidelity ($n=21$); and \textit{irrelevant} posts ($n=1209$).  
+
+
+
+The final data set consists of 1646 posts with a total of 30745 comments from 123 subreddits. 666 posts (40.5\%) come from r/survivinginfidelity,  433 (26.3\%) from r/infidelity, and 547 (33.2\%) from others (r/relationships: 139 (8.4\%); r/relation-ship\_advice and r/relationships\_advice: 122 (7.3\%), and less than 20 each from the remaining 118 subreddits). 472 (28.7\%) of all posts were sampled from new posts, 384 (23.3\%) from hot posts, 192 (11.7\%) from top posts, and 138 (8.4\%) from controversial posts. The remaining 460 (27.9\%) were found through keyword search. 
+
+
+
+
+%\subsection{Additional Features}
+
+%We enriched the data set with three types of variables, \emph{forum discussion} variables that summarise Reddit-specific information, \emph{content} variables that characterise the content of posts (partner gender) and comments (acknowledgements of perceived support), and \emph{LIWC} (linguistic inquiry and word count)~\cite{Pennebaker07} variables that have been used extensively for the analysis of social media data. 
+
+%\paragraph{Forum discussion variables.} For each post, we calculated the time difference between first and last comment (time span), the number of comments from the OP, and number of comment from the community. We also flagged whether the name of the post author contains the word ``throwaway'', which is the generally accepted indicator of a throwaway account for the discussion of a sensitive topic.  For comments, we computed the number of replies from the OP, the number of replies from the community, time span, and time delay after the post. We also flagged whether the text of a comment had been deleted, or whether the name of the comment author was empty, which indicates a deleted account.  
+
+%\paragraph{Content: Partner Gender.} OPs often mention the gender of their partner when talking about their experience of infidelity. We annotated each post with partner gender using a rule-based classifier that takes into account gender-specific keywords in the title as well as the ratio between male and female pronoun. If no gender can be established, the post is labeled as neutral. We evaluated the classifier by drawing a random sample of 100 posts from each of the three categories ``male partner'', ``female partner'', and ``neutral''. Only 9 (3\%) of those 300 cases were misclassified. In five of those cases, male partners were misclassified as female, because the post focused on the other woman who had been with the male partner. 
+
+% We evaluate the partner gender classifier by comparing the machine labels with manual labels. We randomly sample 100 posts in the machine labeled sample, then randomly sample another 100 among those machine labeled as male, another 100 among those machine labeled as female. Later on, author 1 labels the 300 posts manually then we compare the manual labels with machine labels. Machine mis-classified 9 cases out of 300 case, which is 97\% accurate. Among the 9 mis-classified cases, 5 male partners are misclassified as female. We observe the text of these mis-classified cases and find that OPs in these cases focus on describing the female who had an affair with their partners. 
+
+%\paragraph{Content: Acknowledging Support.} We use the following keywords to determine whether an OP comment acknowledges support received from others suring the discussion: ``thank you'',``thanks'', ``helps'',``helpful'',``helping'',``great advice'', ``good advice'', ``good point'', ``I agree'', ``fair points'',``good stuff'', ``great stuff'',``you are right''. 
+
+%\paragraph{LIWC}
+
+%\subsection{Questions} 
+%In order to obtain an initial overview of support requests, we extracted all questions from the posts. Questions were defined as a sentence ending in a question mark.  As Table~\ref{tab:postdata} shows, most posts contained at least one question. All words in each question were converted to their stem (base form minus inflections) using the Python NLTK Porter Stemmer. We then computed the most frequently occurring word stems (unigrams) and the most frequently occurring sequences of four words (4-grams). 
+
+\section{Method}
+
+For our analysis, we initially extract a set of features that characterise the posts and comments based on their content and interactions with them. These features are then used to group posts and comments into clusters to allow in-depth analysis.
+
+\subsection{Feature Extraction}
+
+We extracted a set of feature groups to characterise the posts, the comments, and the level of engagement between the OP and commenters. The feature groups can be listed as follows:
+
+
+\paragraph{Forum Discussion.} For each post, we calculated the time difference between first and last comment (time span), the number of comments from the OP, and number of comments from the community. The amount of comments on a post is often used as a proxy for social support~\cite{balani2015detecting}. We also flagged whether the name of the post author contains the word ``throwaway'', which is the generally accepted indicator of a throwaway account for the discussion of a sensitive topic.  For comments, we computed the number of replies from the OP, the number of replies from the community, time span, and time delay after the post. We also flagged whether the text of a comment had been deleted, or whether the name of the comment author was empty, which indicates a deleted account.  
+
+\paragraph{Partner Gender.} OPs often mention the gender of their partner when talking about their experience of infidelity. We annotated each post with partner gender using a rule-based classifier that takes into account gender-specific keywords in the title as well as the ratio between male and female pronoun. If no gender can be established, the post is labeled as neutral. We evaluated the classifier by drawing a random sample of 100 posts from each of the three categories ``male partner'', ``female partner'', and ``neutral''. Only 9 (3\%) of those 300 cases were misclassified. In five of those cases, male partners were misclassified as female, because the post focused on the other woman who had been with the male partner. 
+
+\paragraph{LIWC.} We extract linguistic features for both the posts and comments using Linguistic Inquiry and Word Count (LIWC)~\cite{Pennebaker07}. These features describe the linguistic, emotional, and cognitive content of posts and comments, and have been extensively used in the literature on analysing social media. We use LIWC to examine differences between posts that receive different levels of engagement. From the wealth of available features, we focused on those that appeared most relevant for engagement in the context of infidelity: summary language variables; word count; affective processes; social processes; cognitive processes; the sexual biological process; personal concerns; time orientation; and informal language.
+
+
+\paragraph{Questions.} In order to obtain an initial overview of support requests, we extracted all questions from the posts. Questions were defined as a sentence ending in a question mark.  As Table~\ref{tab:postdata} shows, most posts contained at least one question. All words in each question were converted to their stem (base form minus inflections) using the Python NLTK PorterStemmer. We then computed the most frequently occurring word stems (unigrams) and the most frequently occurring sequences of four words (4-grams). 
+
+\paragraph{Acknowledging Support.} We use the following keywords to determine whether an OP comment acknowledges support received from others during the discussion: ``thank you'',``thanks'', ``helps'',``helpful'',``helping'',``great advice'', ``good advice'', ``good point'', ``I agree'', ``fair points'',``good stuff'', ``great stuff'',``you are right''. 
+
+
+
+
+\subsection{Cluster Analysis}
+
+We use model-based clustering as implemented in the R package Mclust~\cite{mclust} to detect underlying patterns in post and comment discussions. In model-based clustering, a dataset is represented by a mix of $n$ Gaussian distributions, where each distribution describes a cluster. These Gaussians can be spherical, diagonal, or ellipsoidal. The quality of the clustering is measured using the Bayes Information Criterion (BIC,~\cite{schwarz_estimating_1978}). BIC penalises models that overfit the training data, favouring sparse models with higher explanatory power. Since the features that characterise our data set are both categorical (recoded as binary variables) and numerical, all numerical variables are standardised by subtracting the mean and dividing by two standard deviations, and all binary variables are centred by subtracting the mean~\cite{gelman_scaling_2008}.
+
+Clustering was applied for both the posts and the comments. The six variables used for post clustering were the number of comments, the number of OP comments, the time span of the discussion, the post score, whether a partner gender was specified, and whether the partner gender was male or female. For comment clustering, we used two numerical variables, comment score and delay to original post, and five binary variables, presence of a reply, presence of an OP reply,  throwaway account, deleted comment, and deleted commenter account. 
+
+When analysing the distribution of linguistic features across different post and comment clusters, we use the R function nparcomp~\cite{nparcomp}, which estimates confidence intervals and p-values for several simultaneous comparisons, with the option ``Tukey'' that uses the pairwise comparisons of Tukey's Honest Significant Differences test. For comment clusters, we use Kruskal-Wallis tests to determine whether there are any significant differences between clusters, because the data set is too large for nparcomp to process.
+
+%Feature analysis was then applied for the obtained clusters for posts and comments. Analysis results are reported in the following section.
+
+
+
+
+% \textbf{Determine number of clusters.} Before clustering, we apply quality metric silhouette values and elbow approach on our dataset to determine the number of clusters. The silhouette score measures how similar an observation to its own cluster compared to other clusters. Silhouette value near +1 indicates that the observation is quite distant from the neighboring clusters, 0 indicates that the sample is very close to the decision boundary. A negative value means that the observation might be assigned to the wrong cluster \cite{kaufman1990partitioning}. Another approach to determine the number of clusters is that elbow method. The idea of elbow method is to conduct k-means clustering on the dataset with a range of k value, then calculate the sum of square errors (SSE) for each value of k. A line chart will be plotted to show the SSE for each k value. The elbow on the plot represents where the k increases but the return starts to diminish. Quality metric, elbow method and k-means clustering are conducted by sklearn in Python \cite{pedregosa2011scikit}. 
+
+
+
+
+
+\section{Results}
+
+\subsection{Descriptive Statistics}
+
+%Table \ref{tab:postdata} summarises basic statistics of the data set. While there are few posts which are highly discussed over several days, which accounts for the large difference between means and medians, a typical  post contains one question, is discussed over two days, and receives around eleven comments, with two coming from the OP. 788 (47.8\%) of all 1646 posts talk about a male partner, 709 (43.0\%) are about a female partner, and for 149 (9.0\%), partner gender is inconclusive. Perhaps surprisingly, only 80 (5\%) posts were created using a throwaway account. 935 (3\%) of all 30745 comments were deleted. Four in five comments in our corpus (24905, 81\%) were by community members, and one in five (5840, 19\%) were OP replies.
+
+Our initial analysis to the data collection shows that 788 (47.8\%) of all 1646 posts talk about a male partner, 709 (43.0\%) are about a female partner, and for 149 (9.0\%), partner gender is inconclusive. Perhaps surprisingly, only 80 (5\%) posts were created using a throwaway account. 935 (3\%) of all 30745 comments were deleted. Four in five comments in our corpus (24905, 81\%) were by community members, and almost one fifth of the comments (5840, 19\%) were OP replies.
+Table \ref{tab:postdata} reports some basic statistics of the data set. While there are few posts which are highly discussed over several days, which accounts for the large difference between means and medians, a typical  post contains one question, is discussed over two days, and receives around eleven comments, with two coming from the OP. Interestingly, the majority of posts on infidelity receive the first comment within less than an hour. In fact, the median delay time between post and the first comment is only 4 minutes, which shows the immediate engagement of redditors on posts on this topic. 
+%In the following we analyse the level and types of engagement received on these posts.
 
 
 \begin{table}
-\caption{A badly formatted table}
-\centering
-\label{table:bad_table}
-\begin{tabular}{|l|c|c|c|c|}
-\hline 
-& \multicolumn{2}{c}{Species I} & \multicolumn{2}{c|}{Species II} \\ 
+\begin{center}
+\begin{threeparttable}    
+    \caption{Statistics on the Post and Comment Data. Median, interquartile range (IQR, range between the 25th and the 75th quantile of the data), mean, and standard deviation of each of the variables collected}
+    \label{tab:postdata}   
+    \begin{tabular}{ll|L{3cm}|L{2.2cm}} 
+      \multicolumn{2}{l|}{Feature} & Median (IQR) & Mean $\pm$ SD\\
+      \hline
+        \multicolumn{4}{c}{\textbf{Posts}} \\
+      \hline
+      \multicolumn{2}{l|}{Comments}  & 11.00 (6.00--20.0) & 18.11 $\pm$24.67\\
+      & by OP &2.00 (0--4.00)  & 3.44 $\pm$6.14\\
+      & by others &9.00  (5.00--16.00) & 14.66 $\pm$20.7\\
+      \multicolumn{2}{l|}{Score} & 6.00 (3.00--13.00)& 25.41 $\pm$ 113.92\\
+      \multicolumn{2}{l|}{No. questions} &1.00 (0.00--2.00) & 1.74 $\pm$ 2.30\\
+      \multicolumn{2}{l|}{No. words} &269.0 (134.0--511.8) &  395.5 $\pm$ 412.4\\
+       \hline
+        \multicolumn{4}{c}{\textbf{Comments}} \\
+        \hline
+       \multicolumn{2}{l|}{Score} &2.00 (1.00--5.00) & 5.69 $\pm$ 20.95\\
+      \multicolumn{2}{l|}{Time span (h)} & 44.07 (17.26--173.7) & 288.9 $\pm$ 646.8\\
+       \multicolumn{2}{l|}{Time delay (h)}  &0.07 (0.00--0.80) & 15.84 $\pm$ 156.45\\
+      \hline 
+    \end{tabular}  
+\end{threeparttable}
+\end{center}
+\end{table}
+
+
+
+
+\subsection{Research Question 1: Level of Engagement}
+
+\subsubsection{Engagement with Posts}
+
+Before clustering, we checked the data set for clear outliers and excluded five posts for which the percentage of OP comments is 100\% or higher.
+%as this points to data extraction issues. 
+%\walid{This needs to be mentioned earlier (in data collection) and written in a way that do not provide doubts in our data collection process! Or better not mentioned at all, since it makes a lot of confusion!}
+We then used model-based clustering to estimate models which ranged from 2 to 50 clusters. While the best performing model corresponded to a 47 cluster solution, inspection of the BIC values showed a distinct elbow for a model with six spherical clusters of varying volume, after which model quality improves far more slowly.
+
+The post clusters vary by level of community engagement, partner gender, and source. Tables~\ref{tab:clustdata} and~\ref{tab:postclusters} summarise key features for each of the obtained clusters, where we provide labels for each based on our observations. Clusters 1, 4, and 6 show high community engagement, with Cluster 1 (Female/High) containing posts about female partners, Cluster 4 (Male/High) posts about male partners, and Cluster 6 (Neutral/High) being gender-neutral. Clusters 2 (Male/Low, about male partners) and 5 (Female/Low, about female partners) have lower community engagement. Cluster 3 (General/High), which has the highest percentage of posts found by keywords, is also the cluster with the highest median post score, the highest median number of comments per post, and the longest discussion duration. With the exception of Neutral/High, the OP often responds to comments in High Engagement clusters.  The dominant sources of posts for General/High are r/infidelity (39\%) and other subreddits (43\%), while 59\% of all posts in Neutral/High come from r/survivinginfidelity. 
+
+\begin{table*}
+\caption{Partner Gender and Post Type Differences By Cluster. Partner: gender of partner mentioned in post. NS = partner not specified. Post Type: New, Hot, Top, Controversial, or Other = retrieved by keywords. }
+\small
+\label{tab:clustdata}
+\begin{tabular}{lll|lll|lllll}
 \hline
-Dental measurement  & mean & SD  & mean & SD  \\ \hline 
+  &  Name & N  & \multicolumn{3}{c}{Partner} & \multicolumn{5}{|c}{Post Class}  \\
+ & & & Male & Female & NS & New & Hot & Top & Cont. & Other \\
+\hline 
+1 & Female/High & 304 (18.5\%) & 0 & 304 (100\%) & 0 & 92 (30\%) & 79 (26\%) &35 (12\%) & 27 (9\%) & 71 (23\%))\\
+2 & Male/Low & 262 (16.0\%) & 262 (100\%) & 0 & 0 & 80 (31\%) & 62 (24\%) & 25 (10\%) & 20 (8\%) & 75 (29\%) \\
+3 & General/High & 363 (22.1\%) & 158 (44\%) & 168 (46\%) & 37 (10\%) & 67 (18\%) & 56 (15\%) & 50 (14\%) & 38 (10\%) & 152 (42\%) \\
+4 & Male/High & 364 (22.2\%) & 364 (100\%) & 0 &0 & 114  (31\%) & 97 (27\%) & 36 (10\%) & 27 (7\%) & 90 (25\%) \\
+5 & Female/Low & 236 (14.4\%) & 0 & 236 (100\%) & 0 & 75  (32\%) & 61 (26\%) & 36 (15\%) & 18 (8\%) & 46 (19\%) \\
+6 & Neutral/High & 112 (6.8\%) & 0 & 0 & 112 (100\%) & 41 (37\%) & 29 (26\%) &  9 (8\%) & 8 (7\%) & 25 (22\%) \\
 \hline
-I1MD & 6.23 & 0.91 & 5.2  & 0.7  \\
-\hline 
-I1LL & 7.48 & 0.56 & 8.7  & 0.71 \\
-\hline 
-I2MD & 3.99 & 0.63 & 4.22 & 0.54 \\
-\hline 
-I2LL & 6.81 & 0.02 & 6.66 & 0.01 \\
-\hline 
-CMD & 13.47 & 0.09 & 10.55 & 0.05 \\
-\hline 
-CBL & 11.88 & 0.05 & 13.11 & 0.04\\ 
-\hline 
+\end{tabular}
+\end{table*}
+
+
+\begin{table*}
+\caption{Variations in Forum Discussion By Cluster}
+\small
+\label{tab:postclusters}
+\begin{tabular}{l|l|l|l|l|l|l}
+\hline
+ & Female/High & Male/Low & General/High & Male/High & Female/Low & Neutral/High \\
+ & Med (IQR)& Med (IQR)& Med (IQR)& Med (IQR)& Med (IQR)& Med (IQR) \\
+\hline
+No. Comments & 14.0 (9.0-23.0)& 6.0 (4.0-10.0) &31.0 (9.0-56.5) &11.0 (7.0-17.0)&8.0 (4.0-13.0) &12.6 (5.0-17.0 ) \\
+No. OP Comments & 4.0 (2.0-6.0) & 0.0 ( 0.0-0.0) &3.0 (0.0-11.0) &3.0 (2.0-5.0)&0.0 (0.0-1.0) &0.0 (0.0-2.0)\\
+Time Span (h) & 44.7 (17.3-132)& 22.58 (9.1-68.3) &238.6 (41.24-1562) & 33.1 (16.8-79.3)& 41.9 (15.7-164)& 45.3 (16.4-111) \\
+Score & 6 (3.0-12.0) & 5 (2.0-9.0)& 10 (4.0-55.50) & 5 (2.8-11.0)& 5 (2.0-9.0)& 6.5 (4.0-15.0) \\
+No. Questions & 1.0 (0.0-3.0) & 1.0 (0.0-2.0) &1.0 (0.0-3.0) &1.0 (0.0-3.0) &1.0 (0.0-2.0) & 1.0 (0.0-2.0) \\
+\hline
+\end{tabular}
+\end{table*}
+
+
+We now turn to the LIWC features in order to identify potential linguistic features that might affect community engagement. 
+Medians and interquartile ranges for key LIWC post features are summarised in Table~\ref{tab:postclusterLIWC}. We highlight differences between clusters that are significant at the level of $p<0.05$, after correction for multiple comparisons through nparcomp.
+The most distinctive cluster is Neutral/High. It contains the shortest posts, and scores highest in analytic and authentic language. Posts are unlikely to contain personal pronouns, and do not tend to mention friends, family, and personal concerns. Of all six clusters, Neutral/High posts are least likely to focus on the past. Instead, on inspection, most posts appear to be about dealing with current emotional states. The General/High cluster contains more swear words, fewer expressions of anxiety and sadness, and more mentions of friends. Female/High posts are less likely to discuss causation or use the word ``they'', while Male/Low posts show the least analytic language. 
+
+\begin{table*}
+\caption{LIWC Differences in Post Clusters}
+\label{tab:postclusterLIWC}
+\small
+\begin{tabular}{l|l|l|l|l|l|l}
+\hline
+ & \textbf{FP} & \textbf{MP} &  & \textbf{MP} & \textbf{FP} &  \\
+  & \textbf{More Engaged} & \textbf{Less Engaged} & \textbf{Most Engaged} & \textbf{More Engaged} & \textbf{Less Engaged} &\textbf{No Gender} \\
+ & Med (Q1-Q3) & Med (IQR) & Med (IQR) & Med (IQR) & Med (IQR) & Med (IQR) \\
+ \hline
+WC & 333 (185-581) & 254 (148-460) & 308 (133-624) & 291 (158.8-508.2) & 257.5 (135-486) & 62 (30-124) \\
+Analytic & 27.2 (16.4-40.9) & 20.2 (12.0-34.9) & 24.2 (14.2-36.2) & 23.0 (14.1-37.5) & 24.3 (14.7-40.3) & 35.2 (15.8-64.0) \\
+Sixltr & 13.1 (11.3-15.1) & 13.2 (11.5-15.1) & 13.3 (11.4-15.2) & 13.5 (11.9-15.5) & 12.8 (11.2-14.8) & 15.0 (11.0-18.6) \\
+I & 8.3 (6.7-9.9) & 8.4 (6.7-10.0) & 7.4 (6.2-9.9) & 8.0 (6.7-9.8) & 8.4 (6.8-10.4) & 7.0 (3.2-11.1) \\
+we & 1.0 (0.3-1.7) & 1.0 (0.0-1.8) & 0.9 (0.1-1.6) & 1.0 (0.4-1.6) & 0.7 (0.0-1.5) & 0.0 (0.0-0.4) \\
+you & 0.0 (0.0-0.5) & 0.0 (0.0-0.5) & 0.2 (0.0-0.8) & 0.0 (0.0-0.5) & 0.1 (0.0-0.8) & 0.0 (0.0-1.9) \\
+she/he & 5.5 (3.4-7.2) & 5.6 (3.2-7.7) & 5.7 (3.2-7.6) & 5.7 (3.6-7.7) & 5.4 (3.2-7.1) & 0.0 (0.0-0.0) \\
+they & 0.2 (0.0-0.6) & 0.2 (0.0-0.7) & 0.3 (0.0-0.9) & 0.2 (0.0-0.7) & 0.2 (0.0-0.8) & 0.0 (0.0-1.3) \\
+affect & 6.0 (4.8-7.1) & 5.9 (4.8-7.6) & 5.9 (4.6-7.2) & 6.0 (4.7-7.5) & 5.9 (4.6-7.1) &7.0 (4.3-9.6) \\
+pos. emotion & 2.7 (1.9-3.5) & 2.5 (1.7-3.5) & 2.6 (1.8-3.5) & 2.5 (1.8-3.4) & 2.5 (1.7-3.5) & 2.7 (0.0-4.4) \\
+neg. emotion & 3.0 (2.2-4.0) & 3.2 (2.3-4.3) & 3.0 (2.1-3.9) & 3.1 (2.3-4.2) & 3.0 (2.2-4.0) &3.4 (1.3-5.9) \\
+anxiety & 0.3 (0.0-0.7) & 0.5 (0.0-0.8) & 0.2 (0.0-0.6) & 0.4 (0.0-0.8) & 0.3 (0.0-0.6) & 0.0 (0.0-0.8) \\
+anger & 1.1 (0.6-1.7) & 1.1 (0.7-1.9) &1.2 (0.7-1.8) & 1.1 (0.6-1.8) & 1.1 (0.6-1.8) &0.5 (0.0-2.1) \\
+sad & 0.6 (0.2-1.0) & 0.5 (0.0-1.0) & 0.4 (0.0-0.9) & 0.6 (0.2-1.2) & 0.5 (0.0-0.9) & 0.0 (0.0-1.1) \\
+social & 15.0 (11.9-17.9) & 15.6 (12.3-18.8) & 16.0 (13.1-18.8) & 15.2 (11.8-18.4) & 14.5 (11.5-17.5) & 8.6 (4.6-14.3) \\
+family & 0.4 (0.0-1.2) & 0.4 (0.0-1.0) & 0.4 (0.0-1.5) & 0.3 (0.0-1.1) & 0.5 (0.0-1.5) & 0.0 (0.0-0.0) \\
+friend & 0.7 (0.2-1.4) & 0.7 (0.1-1.4) & 0.8 (0.3-1.5) & 0.6 (0.0-1.2) & 0.8 (0.2-1.3) &0.0 (0.0-0.1) \\
+female & 5.5 (3.8-7.3) & 0.9 (0.0-2.2) & 2.6 (0.4-6.0) & 0.9 (0.0-2.1) & 5.5 (3.4-6.9) & 0.0 (0.0-0.0) \\
+male & 0.8 (0.2-1.6) & 5.4 (3.5-7.3) & 2.3 (0.7-5.6) & 5.5 (3.5-7.4) & 0.7 (0.0-1.4) & 0.0 (0.0-0.0) \\
+cogproc & 13.5 (11.5-15.4) & 13.5 (11.8-15.9) & 13.5 (11.4-16.2) & 13.5 (11.8-16.6) & 13.5 (11.2-5.9) & 13.5 (10.6-18.4) \\
+%informal & 0.8 (0.4-1.4) & 0.6 (0.3-1.1) & 0.9 (0.4-1.6) & 0.7 (0.3-1.3) & 1.0 (0.4-1.8) & 0.0 (0.0-1.5) \\
+swear & 0.0 (0.0-0.4) & 0.0 (0.0-0.3) & 0.2 (0.0-0.6) & 0.0 (0.0-0.4) & 0.0 (0.0-0.6) & 0.0 (0.0-0.0) \\
+%netspeak & 0.0 (0.0-0.4) & 0.0 (0.0-0.3) & 0.0 (0.0-0.4) & 0.0 (0.0-0.4) & 0.0 (0.0-0.5) & 0.0 (0.0-0.0) \\
+\hline
+\end{tabular}
+\end{table*}
+
+When comparing the four gender specific clusters, we find clear differences in engagement by partner gender.  Corrected pairwise comparisons show that almost all of the pairwise differences in number of comments and number of OP comments between clusters are significant at a level of $p<0.001$, except for Male/Low and Female/Low, which have similar overall engagement levels. OPs in the two Female clusters engage more than those in the Male clusters, and overall engagement is higher when discussing female partners than when discussing male partners. We see a similar patterns when we analyse posts by partner gender (see Table~\ref{tab:genderdiff}). Posts about female partners have significantly more OP comments  than gender-neutral posts ($p<0.001$) or those about male partners ($p<0.05$), and posts about women receive more comments overall than posts about men ($p<0.0001$). 
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Differences in Posts by Partner Gender}
+    \label{tab:genderdiff}
+    \begin{tabular}{l|c|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+    \hline
+      \textbf{Feature} & \multicolumn{3}{c}{Partner} \\
+       & \textbf{male} & \textbf{female} &\textbf{neutral}  \\
+      \hline
+      No. Comments  & 10 (6--18) & 13 (7--24) & 11 (5--21)\\
+      No. OP Comments & 2 (0--4) & 2 (0--5) & 1 (0--3) \\
+      Scores  & 5.5 (2--12) & 6 (3--14) & 6 (3--15)\\
+      \hline
+    \end{tabular}
+  \end{center}  
+\end{table}
+
+
+%\paragraph{Gender Differences} \maria{Will rewrite this so that it follows from the detailed analysis of the clusters. No need for separate Kruskal tests.} Posts that mention a male partner use more negative emotional expressions (e.g negative emotion, anxiety, anger, sad) and slightly more self-focused \ref{tab:gender}. Their language is less informal but also less analytical. They receive less comments and lower post scores even though the OP of both genders are equally active. Consistent evidence in prior literature has suggested that the use of 'I' and negative affective words are linked to depression. In light with the previous finding, OP who mention a male partner display more depression related symptoms in their language. This finding is in line with the clinical literature that suggest female partners are more susceptible to depression symptoms than male when they encounter marital problems. Previous literature suggest that the greater negative affect hinders upvotes but drives more comments \cite{balani2015detecting} but here we find that the Male Partner group, which has more negative affect, does not receive more net upvotes and more comments. Instead, the Neutral group use the largest amount of 'I', more affective words (especially negative emotion) than the Male Partner group, but they receive more net upvotes and comments. The are least likely to interact with the redditors as well. Observe closely, we find that the Neutral group is very high in analytical language compare with the two gender groups.
+
+
+%Comparing across different LIWC psychological processing categories over all cluster groups, we find that language attributes in 'Neutral' group have noticeable differences compare with other groups in most of the LIWC variables, see Table \ref{tab:postclusters}. The posts in this group are shorter and but with more words that are longer than 6 letters compare with other groups. More words related to authenticity and analytical thinking are used. There are less personal pronouns, in particular 3rd person singular because gender of the partner is not mentioned in here. In addition, this group contains more words related to anxiety and sadness, but less words related to friends and family. OPs in this group use more informal language and swearing words. They are less likely to reply to comments but they receive more redditor discussion than other groups except for 'Most Engaged'. We observe the text and find that OPs in this group focus on describing their feelings and emotions, that's why they do not use third person pronouns. 
+
+%\todo{Convert LIWC into two tables: differences between  clusters 1-5 and cluster 6, and differences between other clusters. Report median and IQR, not mean - because of the data skewness, showing the mean does not illustrate the actual differences between clusters } 
+%\lucia{the current version is enough to fit all the clusters on the same table, but I deleted the LIWC variables that we didn't analysis in the result}
+
+
+
+
+% * <luciasalar@gmail.com> 2018-08-31T16:24:09.682Z:
+% 
+% > information. 
+% (but why the analytic score is so high? we need to see the words in analytic). 
+% 
+% ^.
+
+\subsubsection{Engagement with Comments}
+
+In order to model community engagement, we restrict our analysis to the 24905 community comments, excluding all comments by the OPs.
+While model-based clustering yielded an optimal solution at 30 clusters,  there was  a clear elbow in the data set at 5 clusters. Table~\ref{tab:commentclust} provides an overview of the solution. Again, we use LIWC features to characterise the content of comments in each cluster. The distribution of relevant features is summarised in Table~\ref{tab:commentclusterLIWC}. All differences are significant at the level of $p<0.001$. 
+
+%Group 1 has the lowest mean values across all variables, which means comments in these group are least popular and least discussed. Authors of these comments response to the post quickly as the time delay to the post is the shortest. Group 2 has the highest mean value in score, which means comments in this group are most popular. Comments in group 3 receive more discussion but little reply from OP. These comments have more words compare with group 0,1 and 3. and that's why it has exceptional longer time delay. Comments in group 5 are quick response with lots of discussion both from OP and the audiences. 
+
+
+% WARNING: The score stats come from my recomputed clusters. No time to go hunting 
+\begin{table}
+\caption{Comment Clusters and Engagement. Delay: Time delay between comment and post }
+\small
+\label{tab:commentclust}
+\begin{tabular}{lll|ll}
+\hline
+  &  Name & N  &  Score & Delay (h) \\
+  \hline
+Affective & 7991 & 32.1\% & 1 (1--2) & 7.3 (2.4-14.3) \\
+Analytic & 6014 & 24.1\% & 3 (1--15) & 5.6 (1.4-34.8)\\
+Self-Disclosing &2490 & 10.0\% & 2 (1--5) & 6.8 (2.7-15.0) \\
+Social & 4615 & 18.5\% & 5 (2--7) & 6.7  (2.3-34.5)\\
+Debate & 3795 & 15.2\% & 2 (1--4)   & 4.5 (1.2-12.0) \\
+\hline
+\end{tabular}
+\end{table}
+
+In Affective comments, the largest group, words related to affect and positive emotions dominate. Social comments are similar, but they are the most highly rated, and contain more social language. Both types of comments do not tend to receive replies. In  Self-Disclosing comments, redditors share their own experience of infidelity, and will often relate this to the OP's situation. These comments tend to receive replies from the community, but not from the OP. Analytic comments are the shortest and are likely to receive replies from other redditors, and sometimes also from the OP. They show least affect and emotion. Finally, Debate comments are the longest. They tend  to address the OP directly (high ``you''), talk about other people ( high ``shehe'') and express anger, and they will receive comments both from the community and from the OP themselves. 
+
+\begin{table*}
+\caption{LIWC Differences in Comment Clusters}
+\label{tab:commentclusterLIWC}
+\small
+\begin{tabular}{l|l|l|l|l|l}
+ & \textbf{Affective} & \textbf{Analytic} & \textbf{Self-focused} & \textbf{Social} & \textbf{Controversial} \\
+ \hline
+ & Med (IQR) & Med (IQR) & Med (IQR) & Med (IQR) & Med (IQR)\\
+ \hline
+WC & 43.0 (17.0-102.0) & 33.0 (10.0-78.0) & 40.0 (17.0-89.8) & 40.0 (17.0-87.0) & 58.0 (27.0-117.0) \\
+Analytic & 28.6 (9.5-51.4) & 31.4 (10.5-75.8) & 24.9 (8.2-51.4) & 24.9 (8.2-51.4) & 23.0 (9.0-45.0) \\
+Sixltr & 14.3 (9.6-20.0) & 15.2 (10.5-22.8) & 13.9 (9.7-18.3) & 13.6 (9.4-18.1) & 13.6 (10.0-17.2) \\
+i & 1.2 (0.0-5.4) & 0.0 (0.0-4.3) & 2.7 (0.0-7.2) & 1.8 (0.0-5.9) & 2.4 (0.0-6.0) \\
+we & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) \\
+you & 3.8 (0.0-8.0) & 3.1 (0.0-7.4) & 2.1 (0.0-6.2) & 4.3 (0.0-8.2) & 5.1 (1.7-8.3) \\
+shehe & 0.0 (0.0-4.9) &1.3 (0.0-5.9) & 0.8 (0.0-5.3) & 2.0 (0.0-6.3) & 2.7 (0.0-6.1) \\
+%they & 0.0 (0.0-0.6) & 0.0 (0.0-0.0) & 0.0 (0.0-0.6) & 0.0 (0.0-0.0) & 0.0 (0.0-0.5\\)
+affect & 7.8 (4.3-10.9) & 6.3 (0.0-10.0) & 7.0 (3.8-10.2) & 7.3 (4.2-11.1) & 6.8 (4.3-9.9) \\
+posemo & 3.8 (0.0-6.4) & 2.3 (0.0-4.9) & 2.9 (0.0-5.4) & 3.1 (0.0-5.8) & 3.2 (1.1-5.3) \\
+negemo & 2.9 (0.0-6.4) & 2.3 (0.0-4.9) & 2.6 (0.0-5.4) & 2.7 (0.0-5.8) & 2.7 (1.1-5.3) \\
+%anx & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) \\
+anger & 0.0 (0.0-2.7) & 0.0 (0.0-2.3) &0.0 (0.0-2.3) & 0.0 (0.0-2.3) & 0.4 (0.0-2.0) \\
+%sad & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) & 0.0 (0.0-0.2) & 0.0 (0.0-0.6) & 0.0 (0.0-0.8) \\
+
+social & 14.9 (10.7-21.0) & 15.8 (7.7-21.6) & 14.9 (9.8-20.3) & 16.7 (11.1-22.4) & 17.1 (12.5-21.9) \\
+%family & 0.0 (0.0-0.9) & 0.0 (0.0-0.0) & 0.0 (0.0-0.4) & 0.0 (0.0-0.7) & 0.0 (0.0-0.9) \\
+%friend & 0.0 (0.0-0.9) & 0.0 (0.0-0.5) & 0.0 (0.0-0.2) & 0.0 (0.0-0.7) & 0.0 (0.0-0.9) \\
+%female & 0.0 (0.0-2.5) & 0.0 (0.0-3.8) & 0.0 (0.0-3.8) & 0.0 (0.0-4.0) & 0.5 (0.0-4.4) \\
+%male & 0.0 (0.0-2.5) & 0.0 (0.0-3.4) & 0.0 (0.0-2.9&) 0.0 (0.0-3.8) & 0.3 (0.0-3.6) \\
+%cogproc & 13.2 (7.3-18.2) & 13.0 (4.8-17.8) & 14.9 (10.3-19.4) & 13.9 (8.9-18.4) & 14.9 (10.8-18.8) \\
+informal & 0.8 (0.0-5.6) & 0.6 (0.0-2.7) & 0.9 (0.0-3.1) & 0.7 (0.0-3.3) & 1.0 (0.0-2.4) \\
+%swear & 0.0 (0.0-0.5) & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) \\
+%netspeak & 0.0 (0.0-1.2) & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) \\ 
+\hline
+\end{tabular}
+\end{table*}
+
+
+\subsection{Perceived Support}
+
+As the analysis of frequent question patterns shows (see Table~\ref{tab:n-gram}), the most frequently asked questions are of the form ``What can/should/do I do?''. These can be requests for general advice or for help with a specific problem related to the experience of infidelity. In another type of question, OPs ask others to share their own experiences (pattern ``been in a similar situation''). OPs may also ask for general advice (e.g., ``As in what exactly is cheating? Where are the boundaries?''), or may seek validations for their own feelings (e.g. ``I know this is wrong but I want to know if it is a normal reaction to being so betrayed or should I seek help for this?'')  Such questions make sense given the subjective nature of each infidelity experience, and the spoken and unspoken relationship rules that define which acts are problematic, and which are not. 
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{The most frequent four-word sequencees in questions}
+    \label{tab:n-gram}
+    \begin{tabular}{lr} 
+    \hline
+      \textbf{4-gram} & \textbf{count} \\
+      \hline
+		What do I do & 44\\
+		What should I do & 29\\
+		How do I get & 19\\
+		What can I do & 18\\
+		I do not know & 15\\
+		can I do to & 13\\
+		How do I move & 10\\
+		Am I supposed to & 10\\
+		been in a similar & 10\\
+%		Is it possible to & 9\\
+%		advice on how to & 9\\
+%		in a similar situation & 9\\
+%		Does anyone have any & 8\\
+%		Do I get over & 8\\
+	\hline
+    \end{tabular} 
+  \end{center}
+\end{table}
+
+Overall, the engagement level of OPs is highly correlated with the total number of comments received (r = 0.73, $p <0.001$) and the post score (r = 0.42, $p < 0.001$). 1773 (30.4\%) of all OP comments acknowledge support received by another commenter, as determined by our keyword-based classifier. Posts with more comments are more likely to contain an acknowledgement of perceived support (r = 0.47, $p <0.001$). In order to identify what types of comments are perceived as supportive, we retrieved all of the comments that OPs had acknowledged. 188 (10.6\%) of these comments had been removed by the time of retrieval, leaving us with a set of 1585 comments. We compared these comments with a randomly sampled control set of 1585 comments that had not been explicitly acknowledged by the OP using several comment-level and LIWC variables. Results are summarised in Table~\ref{tab:appcommentLiwc}. 
+% TODO In revision: should be Spearman! Also correlate appreciation with post 
+OPs are more likely to respond positively to comments with higher word count that express more positive emotion, acknowledge sadness, contain less anger and fewer instances of Internet slang (e.g. lol, thx). Inspecting the most frequent 20 three-word sequences (trigrams) in comments perceived as supportive shows that commenters directly address the OP, show that they understand the OP's experience (``it sounds like''), and emphathise directly (``are going through'', ``I am sorry''). 
+We conclude that OPs regard comments as supportive that are less casual, more detailed, and clearly show empathy.
+
+% Next, we compute the tri-grams of the two subsamples. Table \ref{tab:commentNgram} shows the top 15 tri-grams in both groups. First, we investigate whether the tri-grams in the two groups have noticeable difference. We estimate the strength associated with the two groups with Shannon's mutual information (MI). Mutual information is a measurement that shows how much the information obtain in one variable relates to the other variable. The information obtained is transformed in measurement 'units', such as Shannon. The maximum likelihood estimate of the MI between the two subsample is 0.22, which suggests that the tri-grams in comments that OPs reply to appreciatively are very different from other comments. 
+
+% In Table \ref{tab:commentNgram}, we observe that both samples contain many N-grams that suggest a solution, for instance, 'you have to', 'you need to', 'you can not'. In the support requested analysis, we find that most of the questions in the posts are seeking informational help. In responses, a large amount of the comments provide informational support. Observing closely, comments that elicit appreciation also contain tri-grams that show emotional support, such as 'I am sorry'. In addition, redditors also attempt to paraphrase the situation or thoughts described in the post to show that they are listening, such as  'it sounds like'. This structure helps the OP to organize their memory, it is also a gesture of showing emotional support. 
+
+% In conclusion, the amount of post comments may reflect the amount of enacted support but not perceive support. More post comments only suggests that the post or some of the post comments are more discussed because they are controversial. Most of the support provided are informational, but there are also appraisal and emotional support. Comments with informational support are most endorsed, following with comments provide emotional support. OP tend to appreciate comments with that are more positive and empathetic. 
+
+
+\begin{table}
+\caption{Differences Between Comments that Are Acknowledged as Supportive and Control Sample (All Significant at $p<0.01$ after Bonferroni correction) }
+\small
+\label{tab:appcommentLiwc}
+\begin{tabular}{l|l|l}
+\hline
+ & \textbf{Control} & \textbf{Perceived as}\\
+ & \textbf{Sample} & \textbf{Supportive}\\
+ & Med (IQR) & Med (IQR) \\
+ \hline
+No. Words & 40.0 (17-88.0) & 88.0 (37.0-163.0) \\
+Analytic & 23.8 (7.7-49.7) & 22.6 (10.8-40.1) \\
+Authentic & 24.3 (3.4-72.4) & 26.6 (5.8-61.3) \\
+I & 2.6 (0.0-7.3) & 2.5 (0.4-5.5) \\
+Affect & 7.1 (3.9-10.9) & 7.2 (5.2-10.0) \\
+Positive Emotions & 3.2 (0.0-6.1) & 3.8 (2.1-5.9) \\
+Negative Emotions & 2.6 (0.0-4.9) & 2.8 (1.2-4.7) \\
+Anxiety & 0.0 (0.0-0.0) & 0.0 (0.0-0.4) \\
+Anger & 0.0 (0.0-2.2) & 0.7 (0.0-1.9) \\
+Sadness & 0.0 (0.0-0.2) & 0.0 (0.0-1.0) \\
+Social & 15.5 (9.8-20.7) & 17.2 (13.0-21.3) \\
+Swear Words & 0.0 (0.0-0.0) & 0.0 (0.0-0.4) \\
+Netspeak & 0.0 (0.0-0.0) & 0.0 (0.0-0.0) 
 \end{tabular}
 \end{table}
 
 \begin{table}
-\caption{A nice looking table}
-\centering
-\label{table:nice_table}
-\begin{tabular}{l c c c c}
-\hline 
-\multirow{2}{*}{Dental measurement} & \multicolumn{2}{c}{Species I} & \multicolumn{2}{c}{Species II} \\ 
-\cline{2-5}
-  & mean & SD  & mean & SD  \\ 
+ \caption{Top 20 tri-grams in Comments Perceived as Supportive \label{tab:commentNgram}}
+\begin{tabular}{ll|ll}
 \hline
-I1MD & 6.23 & 0.91 & 5.2  & 0.7  \\
-
-I1LL & 7.48 & 0.56 & 8.7  & 0.71 \\
-
-I2MD & 3.99 & 0.63 & 4.22 & 0.54 \\
-
-I2LL & 6.81 & 0.02 & 6.66 & 0.01 \\
-
-CMD & 13.47 & 0.09 & 10.55 & 0.05 \\
-
-CBL & 11.88 & 0.05 & 13.11 & 0.04\\ 
-\hline 
+tri-gram & count & tri-gram & count \\
+\hline
+you need to & 177 & I do not & 157 \\
+you do not & 141 & you are not & 121 \\
+it is not & 121 & a lot of & 116 \\
+you have to & 105 & you want to & 104 \\
+you are going & 100 & that you are & 96 \\
+if you are & 81 & I am not & 79 \\
+it is a & 79 & I am sorry & 74 \\
+is going to & 66 & it sounds like & 61 \\
+are going through & 58 & not want to & 57 \\
+going to be & 56 & you can not & 56 \\
+\hline
 \end{tabular}
 \end{table}
 
 
-\begin{table}
-\caption{Even better looking table using booktabs}
-\centering
-\label{table:good_table}
-\begin{tabular}{l c c c c}
-\toprule
-\multirow{2}{*}{Dental measurement} & \multicolumn{2}{c}{Species I} & \multicolumn{2}{c}{Species II} \\ 
-\cmidrule{2-5}
-  & mean & SD  & mean & SD  \\ 
-\midrule
-I1MD & 6.23 & 0.91 & 5.2  & 0.7  \\
+\section{Discussion}
+\subsection{Posters Seek Empathy}
 
-I1LL & 7.48 & 0.56 & 8.7  & 0.71 \\
 
-I2MD & 3.99 & 0.63 & 4.22 & 0.54 \\
+The main finding of our analysis is that posters seek not just information, but also empathy. Comments that directly address the OP, use positive emotion words, and show clear signs that the OPs concerns are being heard are more likely to stimulate community engagement, and to receive feedback from the OP. 
+Some redditors may also disclose their own, similar, experiences. While some OPs ask for such disclosures, they typically do not reply to them. However, self-disclosures stimulate community internal discussion, and as such may be important for setting the tone of the subreddit. 
 
-I2LL & 6.81 & 0.02 & 6.66 & 0.01 \\
+Our findings complement the existing literature on online social support. Previous work has focused on the number of upvotes, the number of comments, linguistic adaptation~\cite{balani2015detecting,Sharma2018support} as indications of social support. However, as we saw in the discussion, in order to be effective, people need to feel that they are being supported, which requires overt indicators of empathy. Subreddits where such a supportive discussion culture is encouraged can therefore be an important part of the recovery process for people who have experienced infidelity, and for those whose are going through stressful life events in general. The stress-buffering effect of social support is stronger when the perceived availability of social support matches a person's needs~\cite{holahan1981social, cutrona1990type}. In fact, the belief that support is available when needed might be more important than the amount of support actually received~\cite{wethington1986perceived}. Thus, well managed online communities can play an important part in shoring up a person's resilience and coping mechanisms. They are both a place where posters can turn in times of need, and a clearly signposted safety net whose mere presence can be beneficial. 
 
-CMD & 13.47 & 0.09 & 10.55 & 0.05 \\
+While many of the existing analyses of Reddit focus on mental health~\cite{de2014characterizing,Sharma2018support}, we broaden the discussion to include a potential precipitator of both mental health problems and relationship breakups, experiences of infidelity. We find that online support for people who have experienced infidelity is an underresearched area, compared to internet infidelity, which is widely discussed, and hope to extend our work to other platforms, such as Facebook and Twitter.
 
-CBL & 11.88 & 0.05 & 13.11 & 0.04\\ 
-\bottomrule
-\end{tabular}
-\end{table}
+It is not clear why the community consistently engages somewhat less with those who post about male partners' acts of infidelity than with those who post about female partners' acts of infidelity. The perceived gender of the OP might be a factor, given the misogynist culture that pervades some parts of Reddit~\cite{massanari_gamergate_2017}. The composition of the audience could also affect our findings. While some subreddits regularly survey the demographics of their members, there are no site wide, subreddit specific statistics of the gender distribution of Redditors. Previous surveys within the specialist survey subreddit r/samplesize indicate that most Redditors are male, but it is not clear whether the main audience for the infidelity subreddits is also male. 
+
+\paragraph{Implications for Community Design and Management.} Community managers who wish to ensure that their communities are seen as a supportive safety net should go beyond enforcing netiquette, and provide explicit models of supportive comments and feedback. This can be done both in the community guidelines, and in the managers' own posts and comments. Showing empathy, and giving posters the feeling that their pain and worry is being heard, appears to be a key practice of communities that support people through stressful life events such as infidelity. While self-disclosure by community members may appear egocentric at first, it can foster a spirit of discussion and a general atmosphere of sharing in the community. Reading about other posters' experiences may help the OP, even though they may not explicitly acknowledge it in a comment, and encourage and model safe disclosure. We emphasise that Reddit is a special case in its provisions for poster pseudonymity. This, and the length of posts that are possible on the platform, afford a depth of discussion and disclosure that is impossible to achieve on Twitter, with its short posts, or Facebook, which encourages the use of real names.
+
+
+%Another key component in social support is that whether actually receives support is less important for health and adjustment than one's belief that the support is available . We collected comments that OPs reply appreciatively to as an indicator of OP perceiving they receive social support. Nearly half of the OPs express explicitly that they perceive they have received some kind of social support.  We also find that OPs are more likely to reply appreciatively to longer comments that are more analytical, with less affective words and not referring to comment author's own experience. Nevertheless, OPs also tend to reply appreciatively to comments that shows emotional and esteem support. These two components have been found to provide protection against a wide range of stressful events in clinical literature \cite{cohen1985stress}. 
+
+
+%\textbf{Factors driving discussion.}Factors driving the amount of discussion in the post include OP anticipation of interaction, OP engagement, OP self-focus level and analytical language (refer to Figure \ref{fig:disscussion}). While self-focused level drive both post and comment discussion, but OP do not endorse comment authors who are self-focused. The use of affective words doesn't seem to affect the amount of post discussion but affects the comment discussion. OP also don't endorse comments with many affective words.
+
+%\begin{figure}
+%\includegraphics[width=0.5\textwidth]{discussion.jpeg}
+%\caption{Factors Driving Discussion}
+%\label{fig:disscussion}
+%\end{figure}
+
+
+\subsection{Limitations}
+Unlike~\cite{Sharma2018support}, we did not classify the type of support that posters were seeking, since we were mainly interested in levels of engagement. We also did not analyse our data for the type of infidelity discussed. We would expect the support sought for emotional infidelity to be different than the support requested for sexual infidelity, since emotional infidelity is less well-defined in Western culture. It would also be of interest to search our sample for discussions of Internet infidelity. Since our sample contains a broad range of subreddits, it is difficult to draw conclusions about subreddit specific conventions and communication styles. We also note that Reddit is a platform with mostly Western contributors, which means that support styles will be culture specific. 
+
+\section{Conclusion}
+
+Despite social media's great potential for harm, it also has great potential for good. In this paper, we have discussed how the Reddit community engages with people who have experienced infidelity, and shown how the original posters who report experiences of infidelity can feel supported and upheld by the community. Since infidelity can be devastating, having ready online access to support can be a lifeline for those who go through it. In future work, we hope to expand our existing data set, and to deepen and further contextualise our analyses of the types of infidelity reported, and the kinds of support sought. 
+
+
+
+
+
+
+
+
+   
